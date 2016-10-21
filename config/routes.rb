@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+
   get '/oauth/callback', to: 'pages#index'
+   resources :pages, only: [:new, :index]
   # You can have the root of your site routed with "root"
-  root 'pages#index'
+  root 'pages#new'
   
 
   # Example of regular route:
