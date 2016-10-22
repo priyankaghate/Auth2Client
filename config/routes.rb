@@ -4,9 +4,9 @@ Rails.application.routes.draw do
 
   #get '/oauth/callback', to: 'pages#get_token'
 
-  get '/oauth/called', to: 'sessions#create'
+  get '/oauth/callback', to: 'sessions#create'
   #get '/oauth/callback', to: 'sessions#put_oauth_token'
-  get '/oauth/callback', to: 'pages#get_token'
+  #get '/oauth/callback', to: 'pages#get_token'
   #resources :pages, only: [:new, :index]
     resources :pages, only: [:new, :index] do
          collection do
